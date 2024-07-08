@@ -1,0 +1,86 @@
+Problema Lúdico: A Competição de Robótica
+
+Contexto:
+
+Em uma escola técnica, há uma competição anual de robótica. O desempenho da equipe em competições anteriores, o treinamento que os estudantes receberam e o financiamento da equipe influenciam no sucesso da equipe nesta competição.
+
+Variáveis Aleatórias:
+
+DesempenhoAnterior (DA): pode ser "excelente", "bom" ou "ruim".
+Treinamento (T): pode ser "intensivo", "regular" ou "baixo".
+Financiamento (F): a equipe pode ter "alto" financiamento, "médio" financiamento ou "baixo" financiamento.
+Sucesso (S): o desempenho da equipe na competição pode ser "vencedor", "finalista" ou "não finalista".
+Relações:
+
+O desempenho anterior da equipe pode influenciar tanto no treinamento quanto no financiamento. Por exemplo, uma equipe com excelente desempenho anterior pode conseguir mais patrocinadores e, portanto, ter maior financiamento. O tipo de treinamento e o financiamento disponível influenciam diretamente no sucesso da equipe na competição.
+
+Probabilidades Condicional e Incondicional:
+
+DesempenhoAnterior (DA: excelente, bom, ruim):
+
+excelente: 0.3
+bom: 0.5
+ruim: 0.2
+
+
+Treinamento (T: intensivo, regular, baixo) condicionado ao DA:
+
+intensivo | excelente: 0.7
+intensivo | bom: 0.5
+intensivo | ruim: 0.2
+regular | excelente: 0.2
+regular | bom: 0.3
+regular | ruim: 0.3
+baixo | excelente: 0.1
+baixo | bom: 0.2
+baixo | ruim: 0.5
+
+
+Financiamento (F: alto, médio, baixo) condicionado ao DA:
+
+alto | excelente: 0.8
+alto | bom: 0.5
+alto | ruim: 0.2
+médio | excelente: 0.15
+médio | bom: 0.3
+médio | ruim: 0.4
+baixo | excelente: 0.05
+baixo | bom: 0.2
+baixo | ruim: 0.4
+
+Tabela de Probabilidades de Sucesso (S: Vencedor, Finalista, Não Finalista) condicionado a DesempenhoAnterior (DA), Treinamento (T) e Financiamento (F):
+
+DA	        T	        F	    Vencedor	Finalista	Não Finalista
+Excelente	Intensivo	Alto	0.70	    0.25	    0.05
+Excelente	Intensivo	Médio	0.65	    0.30	    0.05
+Excelente	Intensivo	Baixo	0.60	    0.30	    0.10
+Excelente	Regular	    Alto	0.60	    0.30	    0.10
+Excelente	Regular	    Médio	0.55	    0.30	    0.15
+Excelente	Regular	    Baixo	0.50	    0.35	    0.15
+Excelente	Baixo	    Alto	0.45	    0.35	    0.20
+Excelente	Baixo	    Médio	0.40	    0.35	    0.25
+Excelente	Baixo	    Baixo	0.35	    0.40	    0.25
+Bom	        Intensivo	Alto	0.60	    0.30	    0.10
+Bom	        Intensivo	Médio	0.55	    0.35	    0.10
+Bom	        Intensivo	Baixo	0.50	    0.35	    0.15
+Bom	        Regular	    Alto	0.50	    0.35	    0.15
+Bom	        Regular	    Médio	0.45	    0.35	    0.20
+Bom	        Regular	    Baixo	0.40	    0.40	    0.20
+Bom	        Baixo	    Alto	0.35	    0.40	    0.25
+Bom	        Baixo	    Médio	0.30	    0.45	    0.25
+Bom	        Baixo	    Baixo	0.25	    0.45	    0.30
+Ruim	    Intensivo	Alto	0.45	    0.40	    0.15
+Ruim	    Intensivo	Médio	0.40	    0.45	    0.15
+Ruim	    Intensivo	Baixo	0.35	    0.45	    0.20
+Ruim	    Regular	    Alto	0.35	    0.45	    0.20
+Ruim	    Regular	    Médio	0.30	    0.50	    0.20
+Ruim	    Regular	    Baixo	0.25	    0.50	    0.25
+Ruim	    Baixo	    Alto	0.20	    0.50	    0.30
+Ruim	    Baixo	    Médio	0.15	    0.55	    0.30
+Ruim	    Baixo	    Baixo	0.10	    0.55	    0.35
+
+Quais são as chances de sucesso se:
+
+1) T=Intensivo, F=Baixo
+2) DA=Ruim, F=Alto
+3) DA=Bom, T=Baixo, F=Alto

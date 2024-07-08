@@ -1,0 +1,23 @@
+Problema Lúdico: Padrão Climático de uma Cidade
+
+Contexto:
+
+Em uma cidade particular, o clima do dia é influenciado pelo clima do dia anterior. Por exemplo, se foi ensolarado hoje, há uma boa chance de ser ensolarado amanhã também. No entanto, se foi chuvoso hoje, a probabilidade de continuar chuvoso amanhã é ainda maior.
+
+Variáveis Aleatórias:
+
+Estado1: Sol
+Estado2: Chuva
+
+Matriz de Transição:
+
+Origem/Destino	Sol	Chuva
+Sol	            0.8	0.2
+Chuva	        0.3	0.7
+
+Descrição da Matriz de Transição:
+
+Se o clima é Sol hoje, há uma chance de 80% de ser Sol amanhã e 20% de chance de ser Chuva.
+Se o clima é Chuva hoje, há uma chance de 70% de ser Chuva amanhã e 30% de chance de ser Sol.
+
+Crie uma simulação de 7 dias do padrão climático.

@@ -1,0 +1,83 @@
+Problema Lúdico: A Pontualidade do Trem e o Impacto em Compromissos
+
+Contexto:
+
+Uma pessoa precisa pegar o trem para comparecer a um compromisso importante. No entanto, vários fatores podem afetar a pontualidade do trem, e por sua vez, a possibilidade da pessoa atender ou perder o compromisso.
+
+Variáveis Aleatórias:
+
+Chuva (Chuva): O clima no dia da viagem, que pode estar "nulo" (sem chuva), "leve" ou "pesado".
+Manutenção (Manutenção): Refere-se à manutenção do trem ou das linhas ferroviárias. A manutenção pode ser "sim" (em andamento) ou "não".
+Trem (Trem): Reflete a pontualidade do trem, podendo ser "pontual" ou "atrasado".
+Compromisso (Compromisso): Refere-se ao status do compromisso da pessoa, podendo ser "atendido" ou "perdido".
+
+Relações:
+
+A chuva pode influenciar se haverá ou não uma manutenção (por exemplo, chuvas pesadas podem causar danos às linhas, necessitando de reparos). Ambas, chuva e manutenção, impactam na pontualidade do trem. Finalmente, a pontualidade do trem determinará se o compromisso será atendido ou perdido.
+
+Probabilidades Condicional e Incondicional:
+
+Conforme fornecido anteriormente, temos as tabelas de probabilidades para Chuva, Manutenção condicionada à Chuva, Trem condicionado à Chuva e Manutenção, e Compromisso condicionado ao Trem.
+
+Objetivo:
+
+Dado o estado do clima, o status da manutenção e a pontualidade do trem, qual é a probabilidade de a pessoa atender ao seu compromisso? Se a pessoa perdeu o compromisso, quais são as prováveis condições das outras variáveis?
+
+Este problema pode ser modelado e resolvido usando técnicas de rede Bayesiana, assim como fizemos anteriormente. Através desta análise, podemos entender melhor os fatores que mais influenciam a pontualidade do trem e, por sua vez, a capacidade da pessoa de atender a compromissos importantes.
+
+Variáveis:
+
+Chuva: Nula, Leve, Pesada
+Manutenção: Sim, Não
+Trem: Pontual, Atrasado
+Compromisso: Atendido, Perdido
+
+Distribuições de Probabilidade:
+
+Chuva (Incondicional):
+
+Chuva	Probabilidade
+Nula	0.7
+Leve	0.2
+Pesada	0.1
+
+Manutenção (Condicionada à Chuva):
+
+Chuva	Manutenção	Probabilidade
+Nula	Sim	        0.2
+Nula	Não	        0.8
+Leve	Sim	        0.4
+Leve	Não	        0.6
+Pesada	Sim	        0.7
+Pesada	Não	        0.3
+
+Trem (Condicionado à Chuva e Manutenção):
+
+Chuva	Manutenção	Trem	    Probabilidade
+Nula	Sim	        Pontual	    0.8
+Nula	Sim	        Atrasado	0.2
+Nula	Não	        Pontual	    0.9
+Nula	Não	        Atrasado	0.1
+Leve	Sim	        Pontual	    0.6
+Leve	Sim	        Atrasado	0.4
+Leve	Não	        Pontual	    0.7
+Leve	Não	        Atrasado	0.3
+Pesada	Sim	        Pontual	    0.4
+Pesada	Sim	        Atrasado	0.6
+Pesada	Não	        Pontual	    0.5
+Pesada	Não	        Atrasado	0.5
+
+Compromisso (Condicionado ao Trem):
+
+Trem	    Compromisso	Probabilidade
+Pontual	    Atendido	0.9
+Pontual	    Perdido	    0.1
+Atrasado	Atendido	0.6
+Atrasado	Perdido	    0.4
+
+Exemplo Concreto:
+
+Suponha que em um dia específico não choveu (Chuva = Nula). No entanto, havia manutenção 
+nas linhas (Manutenção = Sim). Dada essa situação, se olharmos para a tabela que liga Chuva e Manutenção ao Trem, vemos que há uma probabilidade de 80% do trem ser pontual e 20% de atrasar. 
+Se o trem for pontual, há uma probabilidade de 90% de o compromisso ser atendido. 
+Se o trem atrasar, a probabilidade de atender o compromisso cai para 60%. Assim, a situação climática e a manutenção têm um impacto direto na pontualidade do trem, que por sua vez afeta a probabilidade de um compromisso ser atendido ou perdido.

@@ -1,0 +1,25 @@
+Problema Lúdico: Decidir Sobre Levar um Guarda-chuva
+
+Contexto:
+
+Uma pessoa está se preparando para sair de casa e quer decidir se deve levar um guarda-chuva ou não. A decisão é influenciada por dois principais fatores observáveis: a aparência do céu e o que o noticiário disse sobre a previsão do tempo.
+
+Variáveis Aleatórias:
+
+Nublado (N): Indica a condição do céu. Pode estar "nublado" ou "claro".
+Noticiário (T): Reflete a previsão do tempo mencionada no noticiário. Pode ter mencionado "possibilidade de chuva" ou "tempo seco".
+Chuva (C): Indica a possibilidade real de chuva durante o dia. Pode "chover" ou "não chover".
+
+Relações:
+
+A condição de estar nublado (N) e a previsão do noticiário (T) influenciam diretamente a possibilidade de chuva (C).
+
+Probabilidades Condicional e Incondicional:
+
+A probabilidade de estar nublado ou claro é de 0.5 para ambos.
+A probabilidade do noticiário mencionar possibilidade de chuva ou tempo seco é de 0.5 para ambos.
+A probabilidade de chuva, dado o estado do céu e o noticiário, varia conforme fornecido no código.
+
+Objetivo:
+
+Dadas as observações sobre a condição do céu e a previsão do noticiário, qual é a probabilidade de realmente chover? Usando essa informação, a pessoa pode tomar uma decisão informada sobre levar ou não um guarda-chuva ao sair de casa.

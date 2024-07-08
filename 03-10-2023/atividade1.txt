@@ -1,0 +1,84 @@
+Problema Lúdico: Evento de Lançamento de um Novo Livro
+
+Contexto:
+
+Uma editora está planejando o lançamento de um novo livro. A probabilidade de um lançamento bem-sucedido depende de vários fatores: o clima no dia do evento, se o autor está disponível para assinar os livros, a existência de uma campanha de marketing para o livro e a crítica recebida pelo livro.
+
+Variáveis Aleatórias:
+
+Clima (Clima): Este fator pode assumir três estados - "ensolarado", "chuvoso" ou "nublado".
+Autor (Autor): Esta variável indica se o autor estará presente no evento ou não, podendo ser "disponível" ou "indisponível".
+Marketing (Marketing): Reflete se há uma campanha de marketing em andamento para o livro. Pode ser "promoção" ou "sem promoção".
+Crítica (Crítica): Representa a avaliação que o livro recebeu, podendo ser "positiva" ou "negativa".
+Lançamento (Lançamento): Indica o sucesso do evento de lançamento, podendo ser "sucesso" ou "fracasso".
+
+Relações:
+
+O clima pode influenciar a disponibilidade do autor para o evento.
+
+O clima e a presença do autor podem influenciar a crítica do livro.
+
+A crítica do livro e a presença de uma promoção de marketing impactam diretamente no sucesso do evento de lançamento.
+
+Distribuições de Probabilidade:
+
+Clima:
+
+ensolarado: 0.6
+chuvoso: 0.2
+nublado: 0.2
+
+Autor (condicionado ao Clima):
+
+disponível | ensolarado: 0.9
+disponível | chuvoso: 0.4
+disponível | nublado: 0.8
+
+indisponível | ensolarado: 0.1
+indisponível | chuvoso: 0.6
+indisponível | nublado: 0.2
+
+Marketing (condicionado ao Clima):
+
+promoção | ensolarado: 0.8
+promoção | chuvoso: 0.3
+promoção | nublado: 0.7
+
+sem promoção | ensolarado: 0.2
+sem promoção | chuvoso: 0.7
+sem promoção | nublado: 0.3
+
+Crítica (condicionado ao Clima e Autor):
+
+positiva | ensolarado, disponível: 0.9
+positiva | ensolarado, indisponível: 0.7
+positiva | chuvoso, disponível: 0.8
+positiva | chuvoso, indisponível: 0.6
+positiva | nublado, disponível: 0.85
+positiva | nublado, indisponível: 0.75
+
+negativa | ensolarado, disponível: 0.1
+negativa | ensolarado, indisponível: 0.3
+negativa | chuvoso, disponível: 0.2
+negativa | chuvoso, indisponível: 0.4
+negativa | nublado, disponível: 0.15
+negativa | nublado, indisponível: 0.25
+
+Lançamento (condicionado à Crítica e
+ Marketing):
+
+sucesso | positiva, promoção: 0.95
+sucesso | positiva, sem promoção: 0.85
+sucesso | negativa, promoção: 0.7
+sucesso | negativa, sem promoção: 0.5
+
+fracasso | positiva, promoção: 0.05
+fracasso | positiva, sem promoção: 0.15
+fracasso | negativa, promoção: 0.3
+fracasso | negativa, sem promoção: 0.5
+
+Objetivo:
+
+1. Em um dia chuvoso, quais são as chances de sucesso e fracasso do lançamento?
+
+2. E, dado o sucesso (ou fracasso) do evento de lançamento, quais são as prováveis condições dessas variáveis?

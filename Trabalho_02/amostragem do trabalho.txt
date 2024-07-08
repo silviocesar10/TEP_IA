@@ -1,0 +1,43 @@
+import numpy as np
+
+prob_desempenho_anterior = [0.3, 0.5, 0.2]  #   Desempenho Anterior (DA: excelente, bom, ruim):
+
+prob_treinamento_dado_desempenho_anterior = {
+    0: [0.7, 0.2, 0.1],  # intensivo
+    1: [0.5,0.3,0.2],    # regular
+    2: [0.2,0.3,0.5]     # baixo
+}
+prob_financiamento_dado_desempenho_anterior = {
+    0: [0.8,0.15,0.05],  # alto
+    1: [0.5,0.3,0.2],    # medio
+    2: [0.2,0.4,0.4]     # baixo
+}
+prob_sucesso_dado_desempenho_anterior_treinamento_financeiro = {
+    (0,0,0): [0.70,0.25,0.05],     #excelente, intensivo, alto
+    (0,0,1): [0.65,0.30,0.05],     #excelente, intensivo, medio
+    (0,0,2): [0.60,0.30,0.10],     #excelente, intensivo, baixo
+    (0,1,0): [0.60,0.30,0.10],     #excelente, regular,   alto
+    (0,1,1): [0.55,0.30,0.15],     #excelente, regular,   medio
+    (0,1,2): [0.45,0.35,0.20],     #excelente, regular,   baixo
+    (0,2,0): [0.45,0.35,0.20],     #excelente, baixo,     alto
+    (0,2,1): [0.40,0.35,0.25],     #excelente, baixo,     medio
+    (0,2,2): [0.35,0.40,0.25],     #excelente, baixo,     baixo
+    (1,0,0): [0.60,0.30,0.10],     #bom,       intensivo, alto
+    (1,0,1): [0.55,0.35,0.10],     #bom,       intensivo, medio
+    (1,0,2): [0.50,0.35,0.15],     #bom,       intensivo, baixo
+    (1,1,0): [0.50,0.35,0.15],     #bom        regular,   alto
+    (1,1,1): [0.45,0.35,0.20],     #bom        regular,   medio
+    (1,1,2): [0.40,0.40,0.20],     #bom        regular,   baixo
+    (1,2,0): [0.35,0.40,0.25],     #bom        baixo,     alto
+    (1,2,1): [0.30,0.45,0.25],     #bom        baixo,     medio
+    (1,2,2): [0.25,0.45,0.30],     #bom        baixo,     baixo
+    (2,0,0): [0.45,0.40,0.15],     #ruim       intensivo, alto
+    (2,0,1): [0.40,0.45,0.15],     #ruim       intensivo, medio
+    (2,0,2): [0.35,0.45,0.20],     #ruim       intensivo, baixo
+    (2,1,0): [0.35,0.45,0.20],     #ruim       regular,   alto
+    (2,1,1): [0.30,0.50,0.20],     #ruim       regular,   medio
+    (2,1,2): [0.25,0.50,0.25],     #ruim       regular,   baixo
+    (2,2,0): [0.20,0.50,0.30],     #ruim       baixo      alto
+    (2,2,1): [0.15,0.55,0.30],     #ruim       baixo      medio
+    (2,2,2): [0.10,0.55,0.35],     #ruim       baixo      baixo
+}

@@ -1,0 +1,36 @@
+Problema Lúdico: Dieta Semanal de João
+
+Contexto:
+
+João tem uma rotina alimentar peculiar. Apesar de adorar variedade, ele é influenciado pelo que comeu no dia anterior. Por exemplo, se ele come arroz hoje, há uma chance maior de ele comer feijão amanhã, pois adora a combinação. Se ele come carne hoje, pode ter vontade de comer um ovo no dia seguinte como uma opção mais leve.
+
+Variáveis Aleatórias:
+
+Estado1: Arroz
+Estado2: Feijão
+Estado3: Carne
+Estado4: Ovo
+Estado5: Tomate
+
+Matriz de Transição (hipotética):
+
+Origem/Destino	Arroz	Feijão	Carne	Ovo	    Tomate
+Arroz	        0.2	    0.5	    0.1	    0.1	    0.1
+Feijão	        0.4	    0.2	    0.2	    0.1	    0.1
+Carne	        0.1	    0.1	    0.2	    0.5	    0.1
+Ovo	            0.2	    0.2	    0.2	    0.2	    0.2
+Tomate	        0.2	    0.2	    0.2	    0.2	    0.2
+
+Descrição da Matriz de Transição:
+
+Se João come Arroz hoje, há uma chance de 50% de ele querer Feijão amanhã. Ele pode repetir Arroz com uma probabilidade de 20%. As outras opções têm chances igualmente menores.
+
+Se João come Feijão hoje, há 40% de chance de ele comer Arroz no dia seguinte. A probabilidade de ele escolher carne é de 20%.
+
+Após comer Carne, João sente a necessidade de algo mais leve e tem 50% de chance de escolher Ovo no dia seguinte.
+
+Se ele come Ovo, as probabilidades são equilibradas entre todas as opções para o dia seguinte, cada uma com uma chance de 20%.
+
+Por fim, se João escolhe Tomate (talvez em uma salada), ele está indeciso sobre o que quer no dia seguinte, dando a todas as opções uma probabilidade igual de 20%.
+
+Crie uma simulação de 7 dias da dieta de João. Inicie com Arroz no primeiro dia.
